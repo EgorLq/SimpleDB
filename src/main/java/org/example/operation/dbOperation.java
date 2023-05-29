@@ -1,4 +1,4 @@
-package org.example.Operation;
+package org.example.operation;
 
 import org.example.exception.DuplicateUserException;
 import org.example.exception.InvalidDataException;
@@ -45,31 +45,41 @@ public class dbOperation {
             throw new UserNotFoundException("Пользователь не существует.");
         }
     }
-
+   public void  update(Long id,Struct newStructForReplace) throws InvalidDataException {
+        update(id,newStructForReplace.getAccount(),newStructForReplace.getName(),newStructForReplace.getValue());
+   }
     /**
      * Обновляет данные пользователя в базе данных.
      *
-     * @param structToUpdate объект Struct, представляющий пользователя, данные которого нужно обновить
+     * @param id объект Struct, представляющий пользователя, данные которого нужно обновить
      * @param newAccount     новое значение аканута
      * @param newName        новое значение имени
      * @param newValue       новое значение значения
      * @throws InvalidDataException  если предоставлены неверные данные для операции обновления
      * @throws UserNotFoundException если пользователь не найден
      */
-    public void update(Struct structToUpdate, Long newAccount, String newName, Double newValue)
+    public void update(Long id, Long newAccount, String newName, Double newValue)
             throws InvalidDataException, UserNotFoundException {
+
         if (newAccount == null || newName == null || newValue == null) {
             throw new InvalidDataException("Предоставлены неверные данные для операции обновления.");
         }
 
-        Struct foundUser = userMap.get(structToUpdate.getAccount());
+        Struct foundUser = userMap.get(id);
         if (foundUser == null) {
             throw new UserNotFoundException("Пользователь не найден.");
         }
 
-        foundUser.setAccount(newAccount);
-        foundUser.setName(newName);
-        foundUser.setValue(newValue);
+        if (newAccount!=null){
+          foundUser.setAccount(newAccount);
+             }
+        if (newName!=null){
+            foundUser.setName(newName);
+        }
+
+        if (newValue!=null){
+            foundUser.setValue(newValue);
+        }
     }
 
     /**
@@ -108,24 +118,20 @@ public class dbOperation {
      * @param value значение пользователя
      * @return объект Struct, представляющий найденного пользователя, или null, если пользователь не найден
      */
-    public Struct findUserByValue(Double value) {
+    public Struct findUserByValue(Double value) throws UserNotFoundException {
         for (Struct struct : userMap.values()) {
             if (Objects.equals(struct.getValue(), value)) {
                 return struct;
             }
         }
-        return null;
+        throw new UserNotFoundException("User not found with the specified value.");
     }
+
 
     /**
      * Выводит детали всех пользователей в базе данных.
      */
     public void printDetails() {
-        for (Struct struct : userMap.values()) {
-            System.out.println("Акаунт: " + struct.getAccount());
-            System.out.println("Имя: " + struct.getName());
-            System.out.println("Значение: " + struct.getValue());
-            System.out.println();
+      userMap.values().forEach(struct -> System.out.println(struct.toString()));
         }
     }
-}

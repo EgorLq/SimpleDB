@@ -1,54 +1,23 @@
 package org.example.struct;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 
 @Getter
 @Setter
 @ToString
+@AllArgsConstructor
+@EqualsAndHashCode
 public class Struct {
     private long account;
     private String name;
     private double value;
 
-    public Struct(Long account, String name, Double value) {
-        this.account = account;
-        this.name = name;
-        this.value = value;
+    @Override
+    public String toString() {
+        return "Акаунт: " + account + "\n" +
+                "Имя: " + name + "\n" +
+                "Значение: " + value + "\n" ;
     }
-
-
-    public long getAccount() {
-        return account;
-    }
-
-
-    public void setAccount(long account) {
-        this.account = account;
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    public double getValue() {
-        return value;
-    }
-
-
-    public void setValue(double value) {
-        this.value = value;
-    }
-
-
 }
 
