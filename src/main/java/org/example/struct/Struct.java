@@ -3,9 +3,7 @@ package org.example.struct;
 import lombok.*;
 
 
-@Getter
-@Setter
-@ToString
+@Data
 @AllArgsConstructor
 @EqualsAndHashCode
 public class Struct {
@@ -13,11 +11,5 @@ public class Struct {
     private String name;
     private double value;
 
-    @Override
-    public String toString() {
-        return "Акаунт: " + account + "\n" +
-                "Имя: " + name + "\n" +
-                "Значение: " + value + "\n" ;
-    }
 }
 
