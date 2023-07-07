@@ -5,35 +5,34 @@ import org.example.exception.DuplicateUserException;
 import org.example.exception.InvalidDataException;
 import org.example.struct.Struct;
 
-
 public class Main {
 
-    public static void main(String[] args) throws DuplicateUserException, InvalidDataException {
+  public static void main(String[] args) throws DuplicateUserException, InvalidDataException {
 
-        dbOperation entry = new dbOperation();
+    dbOperation entry = new dbOperation();
 
-        System.out.println("добавление записи  бд :");
+    System.out.println("добавление записи  бд :");
 
-        entry.add(new Struct(4L, "Арнольд тогвард", 44.1));
-        entry.add(new Struct(3L, "Степан Шелби", 1.3));
-        entry.add(new Struct(123L, "Виталий ", 14.1));
-        entry.add(new Struct(14L, "Саша ", 18.1321));
+    entry.add(new Struct(4L, "Арнольд тогвард", 44.1));
+    entry.add(new Struct(3L, "Степан Шелби", 1.3));
+    entry.add(new Struct(123L, "Виталий ", 14.1));
+    entry.add(new Struct(14L, "Саша ", 18.1321));
 
-        entry.printDetails();
+    entry.printDetails();
 
-        System.out.println("удаление записи в бд :");
-        entry.remove(new Struct(123L, "Виталий ", 14.1));
+    System.out.println("удаление записи в бд :");
+    entry.remove(new Struct(123L, "Виталий ", 14.1));
 
-        entry.printDetails();
+    entry.printDetails();
 
-        System.out.println("редактирование записи в бд :");
+    System.out.println("редактирование записи в бд :");
 
-        entry.update(4L,5L,"Арнольд Великий",44.1 );
+    entry.update(4L, 5L, "Арнольд Великий", 44.1);
 
-        entry.printDetails();
+    entry.printDetails();
 
-        System.out.println(entry.findUserByName("Арнольд Великий").toString());
-        System.out.println(entry.findUserByAccount(14L).toString());
-        System.out.println(entry.findUserByValue(1.3).toString());
-    }
+    System.out.println(entry.findUserByName("Арнольд Великий").toString());
+    System.out.println(entry.findUserByAccount(14L).toString());
+    System.out.println(entry.findUserByValue(1.3).toString());
+  }
 }

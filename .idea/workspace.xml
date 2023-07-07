@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43d21331-dfda-45e7-a70b-6cc3901c123e" name="Changes" comment="first">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="43d21331-dfda-45e7-a70b-6cc3901c123e" name="Changes" comment="fix annotation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Operation/dbOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/operation/dbOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/struct/Struct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/struct/Struct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/оценка сложности и описание памяти" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/оценка сложности и описание памяти" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dbOperationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DbOperationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,22 +33,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "google-java-format.settings"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.DbOperationTest">
+}]]></component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="DbOperationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DbOperationTest" />
       <module name="SimpleDB" />
@@ -97,8 +92,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DbOperationTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.DbOperationTest" />
         <item itemvalue="JUnit.DbOperationTest.testRemoveUser" />
         <item itemvalue="Application.DbOperationTest" />
       </list>
@@ -115,6 +110,11 @@
       <workItem from="1685190538663" duration="14817000" />
       <workItem from="1685293729436" duration="4465000" />
       <workItem from="1685327382520" duration="335000" />
+      <workItem from="1685328045845" duration="378000" />
+      <workItem from="1685432880881" duration="1140000" />
+      <workItem from="1688037301873" duration="2718000" />
+      <workItem from="1688349680167" duration="646000" />
+      <workItem from="1688768597063" duration="182000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1685293802847</created>
@@ -123,7 +123,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685293802847</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first">
+      <created>1685328081759</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685328081759</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix annotation">
+      <created>1688349701609</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688349701609</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +156,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
-    <option name="LAST_COMMIT_MESSAGE" value="first" />
+    <MESSAGE value="fix annotation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix annotation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
